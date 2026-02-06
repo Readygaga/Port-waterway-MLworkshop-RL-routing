@@ -42,8 +42,6 @@ Objective = 'Obj8'
 #         score += reward
 #     score_list.append(reward)
 #     print('episode:{} reward:{}'.format(episode, reward))
-# print(np.mean(score_list))
-# print(np.std(score_list))
 # envR.close()
 
 # #Train an agent
@@ -78,7 +76,6 @@ print('step output',obs, reward, done, truncated)
 
 # Run some episodes to see how the trained agent performs
 episodes = 10
-score_list = []
 for episode in range(1, episodes + 1):
     print('episode:{}'.format(episode))
     done = False
@@ -96,11 +93,9 @@ for episode in range(1, episodes + 1):
         envR.render()
         pygame.time.delay(1000)
         print('output_obs', obs, reward, done, truncated) #observation is the same as state
-        score += reward
     score_list.append(reward)
-print(np.mean(score_list))
-print(np.std(score_list))
 envR.close()
+
 
 
 
