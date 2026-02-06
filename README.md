@@ -28,7 +28,7 @@ The file with the name envRL_noMask is the file without the masking function. Tr
 The files in the directory notebooks are the replicates of all the .py files. So the function descriptions above apply to the Jupyter notebook files.
 
 # Training/Model directory
-The Training/Model directory contains some pretrained agents/models. In case you don't want to spend time to train agents, especially those trained with millions of steps/episodes.
+The Training/Model directory contains some pretrained agents/models. In case you don't want to spend time to train agents, especially to train them with millions of steps/episodes.
 
 # About Training Logs
 A Log directory will be created when you train agents. Then you can use TensorBoard to see the learning process. To use TensorBoard, write tensorboard --logdir Training/Logs in your IDE terminal, then you will get a link. You will be directed to TensorBoard by clicking the link.
