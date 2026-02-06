@@ -26,3 +26,6 @@ The files in directory notebooks are the replicates the all the .py files. So th
 # Training/Model directory
 The Training/Model directory contains some pretrained agents/models. In case you don't want to spend time to train agents, especially those trained with millions of steps/episodes.
 
+# About Training logs
+A Log directory will be created when you train agents. Then you can use tensorboard to see the learning process. To use tensorboard, write tensorboard --logdir Training/Logs in your IDE terminal, then you wil get a link, clicking the link will direct you to tensorboard.
+
