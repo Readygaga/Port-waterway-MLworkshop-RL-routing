@@ -13,8 +13,8 @@ The action space, observation space, state space, reward function can be differe
 
 File with name "main" is to define the fishing route network.
 
-FIle with name NSGA is not part of the reinforcement learning. So, just leave it as it is.
+File with name NSGA is not part of the reinforcement learning. So, just leave it as it is.
 
-File with name Env_training_testing is the file which includes all the code to set up a training environment, testing the environment, trainining of an agent, testing etc. incase you prefer to work in one script.
+File with name Env_training_testing is the file which includes all the code to set up a training environment, testing the environment, trainining of an agent, testing etc. in case you prefer to work in one script.
 
 File with name envRL_noMask is the file without masking function. Train a proper agent will take much longer time without the masking function. I include this file in case you want to try it out.
