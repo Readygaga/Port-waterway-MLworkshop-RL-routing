@@ -5,7 +5,7 @@ The case is to show you that a trained agent can do the same task and give you t
 
 # Steps to get the code running
 
-Step 1: Install libraries from the requirements.txt by typing the command pip install requirements.txt or in whatever way you like.
+Step 1: Install packages from the requirements.txt by typing the command pip install requirements.txt or in whatever way you like.
 
 Step 2: Go to Training_testing.py to test the virtual environment, train an agent, and test the performance of a trained agent. Animation will show up a while after clicking run to test an environment or to run some episodes to see the performance of a trained agent.
 
