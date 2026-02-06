@@ -1,5 +1,9 @@
 # RLforFishingRouting
-Use reinforcement learning to train agent to optimize fishing route
+Use reinforcement learning to train agent to optimize fishing route.
+The case is pretty simple, do please do not over think it. The training environment is deterministic, so you basically know the optimal solution by hand calculation.
+The case is to show you that a trained agent can do the same task and give you the correct answer.
+
+# Steps to get the code running
 
 Step 1: Install libraries from the requirements.txt using pip or whatever way you like.
 
