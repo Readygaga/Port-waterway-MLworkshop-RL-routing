@@ -24,36 +24,36 @@ envR=envRL_masking_obj1.envR   # for instance, change "1" to "4", then you get a
 Objective = 'Obj1'
 
 #Test training environment
-# episodes = 5
-# for episode in range(1, episodes +1):
-#     print('episode:{}'.format(episode))
-#     done = False
-#     obs, _ = envR.reset()
-#     envR.render()
-#     pygame.time.delay(1000)
-#     length = 10
-#     while not done:
-#         action = envR.action_space.sample(mask=envR.action_masks())
-#         print('action chosen:', action)
-#         obs, reward, done, truncated, info = envR.step(action)
-#         envR.render()
-#         pygame.time.delay(1000)
-#     print('episode:{} reward:{}'.format(episode, reward))
-# envR.close()
+episodes = 5
+for episode in range(1, episodes +1):
+    print('episode:{}'.format(episode))
+    done = False
+    obs, _ = envR.reset()
+    envR.render()
+    pygame.time.delay(1000)
+    length = 10
+    while not done:
+        action = envR.action_space.sample(mask=envR.action_masks())
+        print('action chosen:', action)
+        obs, reward, done, truncated, info = envR.step(action)
+        envR.render()
+        pygame.time.delay(1000)
+    print('episode:{} reward:{}'.format(episode, reward))
+envR.close()
 
 # #Train an agent
-# timesteps = 20000 # 100000, 1000000, 3000000, 5000000, 10000000
-# total_timesteps=timestep
-# start_time = time.time()
-# log_path = os.path.join('Training', 'Logs', f'{Objective}_{total_timesteps}stepModel')
-# model_path = os.path.join('Training', 'Model', f'{Objective}_{total_timesteps}stepModel')
-# model = MaskablePPO("MultiInputPolicy", envR, verbose=1, tensorboard_log=log_path, seed=100)
-# model.learn(total_timesteps=total_timesteps)
-# finish_time = time.time()
-# time_used = finish_time-start_time
-# print('Time spent for training:', time_used)
-# #save the trained model
-# model.save(model_path)
+timesteps = 20000 # 100000, 1000000, 3000000, 5000000, 10000000
+total_timesteps=timestep
+start_time = time.time()
+log_path = os.path.join('Training', 'Logs', f'{Objective}_{total_timesteps}stepModel')
+model_path = os.path.join('Training', 'Model', f'{Objective}_{total_timesteps}stepModel')
+model = MaskablePPO("MultiInputPolicy", envR, verbose=1, tensorboard_log=log_path, seed=100)
+model.learn(total_timesteps=total_timesteps)
+finish_time = time.time()
+time_used = finish_time-start_time
+print('Time spent for training:', time_used)
+#save the trained model
+model.save(model_path)
 
 # Load a trained agent
 total_timesteps=3000000
@@ -89,6 +89,7 @@ for episode in range(1, episodes + 1):
         pygame.time.delay(1000)
         print('output_obs', obs, reward, done, truncated) #observation is the same as state
 envR.close()
+
 
 
 
