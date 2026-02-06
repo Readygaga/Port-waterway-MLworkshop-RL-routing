@@ -31,7 +31,6 @@ Objective = 'Obj8'
 #     obs, _ = envR.reset()
 #     envR.render()
 #     pygame.time.delay(1000)
-#     score = 0
 #     length = 10
 #     while not done:
 #         action = envR.action_space.sample(mask=envR.action_masks())
@@ -95,6 +94,7 @@ for episode in range(1, episodes + 1):
         print('output_obs', obs, reward, done, truncated) #observation is the same as state
     score_list.append(reward)
 envR.close()
+
 
 
 
