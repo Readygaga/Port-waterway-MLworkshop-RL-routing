@@ -21,7 +21,6 @@ from scgraph.geographs.marnet import marnet_geograph
 from matplotlib import animation
 from matplotlib.animation import PillowWriter
 import NSGA
-#import Icing
 
 class Grid:
     """Grid created from map"""
@@ -1703,5 +1702,6 @@ def dynamic_routing_with_visualization(Graph, ship, gene_space, start, end, obje
     ani = animation.FuncAnimation(fig, animate, init_func=initial_draw, interval=2000)
     #plt.show()
     ani.save(f'{resultdir}/route {start.name}-{end.name}.gif', writer=PillowWriter(fps=1))
+
 
 
