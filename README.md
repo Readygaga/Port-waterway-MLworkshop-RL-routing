@@ -7,7 +7,7 @@ Step 2: Go to Training_testing.py to test the virtual environment, train an agen
 
 
 # Functions of different files
-Files with names from envRL_masking_obj1 to envRL_masking_obj5 and envRL_masking_obj8 is to create a virtual fishing environment for training.
+Files with names from envRL_masking_obj1 to envRL_masking_obj5 and envRL_masking_obj8 is to create a virtual fishing environment for training. Each file create one virtual environment.
 
 The action space, observation space, state space, reward function can be different depending on the objective that the agent trys to achieve.
 
