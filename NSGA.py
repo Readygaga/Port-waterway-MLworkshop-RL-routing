@@ -12,46 +12,6 @@ import itertools
 import random
 from copy import deepcopy
 
-"""
-Example:
-
-objectivefuncs = {'minimize': [pathRisk, pathDistance], 'maximize': [pathCatch]}
-"objectivefuncs = [pathCatch, pathDistance, pathRisk]"
-print(objectivefuncs['minimize'] + objectivefuncs['maximize'])
-print(dominator(paths[1], paths[0], objectivefuncs))
-
-constraints = {'total_risk': {'low': 0, 'include_low': True, 'high': 400, 'include_high': True},
-               'total_distance': {'low': 0, 'include_low': True, 'high': 1900, 'include_high': True},
-               'total_catch': {'low': 0, 'include_low': True, 'high': 800, 'include_high': True}}
-
-print('number of routes:',
-      len(constraint_handling(paths, constraints, constraint_funcs=[pathRisk, pathDistance, pathCatch])))
-print(pathsinfo['total_distance'])
-
-print(pareto_optima(paths, objectivefuncs)[0])
-print([pathDistance(path) for path in paths])
-print(range(0, len(paths)))
-pathsinfo['rank'] = pareto_optima(paths, objectivefuncs)[1]
-pathsinfo['paretofront'] = pareto_optima(paths, objectivefuncs)[2]
-
-print(crowding_distance(paths, objectivefuncs=[pathCatch, pathRisk, pathDistance]))
-pathsinfo['distance'] = crowding_distance(paths, objectivefuncs=[pathCatch, pathRisk, pathDistance])
-newdf = pathsinfo[pathsinfo['paretofront'] == 1]
-optimal_routes = newdf[newdf['distance'] > 0]['path'].tolist()
-print(optimal_routes)
-
-
-crowding_distance_2(pathsinfo, objectives=['total_catch', 'total_distance', 'total_risk'])
-newdf = pathsinfo[pathsinfo['paretofront'] == 1]
-optimal_routes = newdf[newdf['distance'] > 0]['path'].tolist()
-print(optimal_routes)
-
-objectives = {'minimize': ['total_risk', 'total_distance'], 'maximize': ['total_catch']}
-
-plot_pareto_optima_route(optimal_routes)
-plt.show()
-
-"""
 
 
 def dominator(p, q, objectivefuncs):
