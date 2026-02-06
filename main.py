@@ -501,15 +501,6 @@ class Graph:
             pos = {n:[n.position[1], n.position[0]] for n in list(self.graph.nodes())}
             nx.draw_networkx_edges(self.graph, pos=pos, edgelist=edgelist, connectionstyle=f'arc3, rad = {rad}', edge_color=colorlist[i])
 
-
-
-
-
-
-
-
-
-
 class Weather:
     """
     Weather should include weather parameters, location and time.
@@ -1702,6 +1693,7 @@ def dynamic_routing_with_visualization(Graph, ship, gene_space, start, end, obje
     ani = animation.FuncAnimation(fig, animate, init_func=initial_draw, interval=2000)
     #plt.show()
     ani.save(f'{resultdir}/route {start.name}-{end.name}.gif', writer=PillowWriter(fps=1))
+
 
 
 
