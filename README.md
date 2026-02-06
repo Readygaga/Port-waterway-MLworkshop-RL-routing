@@ -18,3 +18,7 @@ File with name NSGA is not part of the reinforcement learning. So, just leave it
 File with name Env_training_testing is the file which includes all the code to set up a training environment, testing the environment, trainining of an agent, testing etc. in case you prefer to work in one script.
 
 File with name envRL_noMask is the file without masking function. Train a proper agent will take much longer time without the masking function. I include this file in case you want to try it out.
+
+
+# notebooks
+The files in directory notebooks are the replicates the all the .py files. So the function descriptions above apply to the jupyter notebook files. 
