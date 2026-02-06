@@ -18,10 +18,10 @@ import envRL_masking_obj1,envRL_masking_obj2, envRL_masking_obj3
 import envRL_masking_obj4, envRL_masking_obj5, envRL_masking_obj8
 
 
-#Specify environment
-envR=envRL_masking_obj8.envR
+#Specify environment, feel free to change to another training environment (from 1, 2, 3, 4, 5, 8)
+envR=envRL_masking_obj1.envR
 #Specify location for log and model file
-Objective = 'Obj8'
+Objective = 'Obj1'
 
 #Test training environment
 # episodes = 5
@@ -90,6 +90,7 @@ for episode in range(1, episodes + 1):
         pygame.time.delay(1000)
         print('output_obs', obs, reward, done, truncated) #observation is the same as state
 envR.close()
+
 
 
 
