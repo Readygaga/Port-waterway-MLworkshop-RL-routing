@@ -38,7 +38,6 @@ Objective = 'Obj8'
 #         obs, reward, done, truncated, info = envR.step(action)
 #         envR.render()
 #         pygame.time.delay(1000)
-#         score += reward
 #     score_list.append(reward)
 #     print('episode:{} reward:{}'.format(episode, reward))
 # envR.close()
@@ -82,7 +81,6 @@ for episode in range(1, episodes + 1):
     envR.render()
     pygame.time.delay(1000)
     print('Observation output from initial',obs)
-    score = 0
     length = 10
     while not done:
         print('input_obs', obs)
@@ -92,8 +90,8 @@ for episode in range(1, episodes + 1):
         envR.render()
         pygame.time.delay(1000)
         print('output_obs', obs, reward, done, truncated) #observation is the same as state
-    score_list.append(reward)
 envR.close()
+
 
 
 
