@@ -19,8 +19,8 @@ import envRL_masking_obj4, envRL_masking_obj5, envRL_masking_obj8
 
 
 #Specify environment, feel free to change to another training environment (from 1, 2, 3, 4, 5, 8)
-envR=envRL_masking_obj1.envR
-#Specify location for log and model file
+envR=envRL_masking_obj1.envR   # for instance, change "1" to "4", then you get another training environment.
+#Specify location and name for log and model file
 Objective = 'Obj1'
 
 #Test training environment
@@ -42,19 +42,18 @@ Objective = 'Obj1'
 # envR.close()
 
 # #Train an agent
-# timesteps = [10000, 1000000, 3000000] # 20000, 100000, 1000000, 3000000, 5000000, 10000000
-# for timestep in timesteps:
-#     total_timesteps=timestep
-#     start_time = time.time()
-#     log_path = os.path.join('Training', 'Logs', f'{Objective}_{total_timesteps}stepModel')
-#     model_path = os.path.join('Training', 'Model', f'{Objective}_{total_timesteps}stepModel')
-#     model = MaskablePPO("MultiInputPolicy", envR, verbose=1, tensorboard_log=log_path, seed=100)
-#     model.learn(total_timesteps=total_timesteps)
-#     finish_time = time.time()
-#     time_used = finish_time-start_time
-#     print('Time spent for training:', time_used)
-#     #save the trained model
-#     model.save(model_path)
+# timesteps = 20000 # 100000, 1000000, 3000000, 5000000, 10000000
+# total_timesteps=timestep
+# start_time = time.time()
+# log_path = os.path.join('Training', 'Logs', f'{Objective}_{total_timesteps}stepModel')
+# model_path = os.path.join('Training', 'Model', f'{Objective}_{total_timesteps}stepModel')
+# model = MaskablePPO("MultiInputPolicy", envR, verbose=1, tensorboard_log=log_path, seed=100)
+# model.learn(total_timesteps=total_timesteps)
+# finish_time = time.time()
+# time_used = finish_time-start_time
+# print('Time spent for training:', time_used)
+# #save the trained model
+# model.save(model_path)
 
 # Load a trained agent
 total_timesteps=3000000
@@ -90,6 +89,7 @@ for episode in range(1, episodes + 1):
         pygame.time.delay(1000)
         print('output_obs', obs, reward, done, truncated) #observation is the same as state
 envR.close()
+
 
 
 
