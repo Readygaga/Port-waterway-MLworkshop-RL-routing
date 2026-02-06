@@ -52,8 +52,8 @@ Objective = 'Obj8'
 # for timestep in timesteps:
 #     total_timesteps=timestep
 #     start_time = time.time()
-#     log_path = os.path.join('Training', 'Logs', Objective, f'{Objective}_{total_timesteps}stepModel')
-#     model_path = os.path.join('Training', 'Model', Objective, f'{Objective}_{total_timesteps}stepModel')
+#     log_path = os.path.join('Training', 'Logs', f'{Objective}_{total_timesteps}stepModel')
+#     model_path = os.path.join('Training', 'Model', f'{Objective}_{total_timesteps}stepModel')
 #     model = MaskablePPO("MultiInputPolicy", envR, verbose=1, tensorboard_log=log_path, seed=100)
 #     model.learn(total_timesteps=total_timesteps)
 #     finish_time = time.time()
@@ -64,7 +64,7 @@ Objective = 'Obj8'
 
 # Load a trained agent
 total_timesteps=3000000
-model_path = os.path.join('Training', 'Model', Objective, f'{Objective}_{total_timesteps}stepModel')
+model_path = os.path.join('Training', 'Model', f'{Objective}_{total_timesteps}stepModel')
 model = MaskablePPO.load(model_path, env=envR)
 #
 #
@@ -102,5 +102,6 @@ for episode in range(1, episodes + 1):
 print(np.mean(score_list))
 print(np.std(score_list))
 envR.close()
+
 
 
