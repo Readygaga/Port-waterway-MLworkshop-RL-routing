@@ -14,7 +14,6 @@ from sb3_contrib.ppo_mask import MaskablePPO
 import matplotlib.backends.backend_agg as agg
 
 # Import some environments which have different objectives and/or rewards function
-
 import envRL_masking_obj1,envRL_masking_obj2, envRL_masking_obj3
 import envRL_masking_obj4, envRL_masking_obj5, envRL_masking_obj8
 
@@ -102,6 +101,7 @@ for episode in range(1, episodes + 1):
 print(np.mean(score_list))
 print(np.std(score_list))
 envR.close()
+
 
 
 
