@@ -4,7 +4,7 @@ The case is pretty simple, so please do not overthink. The training environment 
 The case is to show you that a trained agent can do the same task and give you the correct answer.
 
 # Steps to get the code running
-Step 1: Get the code, via clone, github desktop or download.
+Step 1: Get the code, via clone, github desktop or download. How to clone? Instructions are provided here: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 Step 1: Install packages from the requirements.txt by typing the command pip install requirements.txt or in whatever way you like.
 
